@@ -3,7 +3,7 @@ import type { RequestEvent } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 import { analyticsSchema, type CountryCode, linksSchema } from '$lib/server/db/schema';
 import { logger } from '$lib/utils/logger';
-import '../../../../scripts/set-env';
+import '../../../scripts/set-env';
 import { eq } from 'drizzle-orm';
 import { puppeteerService } from '$lib/server/puppeteer';
 
@@ -116,8 +116,8 @@ async function scrapeLinks(country: CountryCode): Promise<{ success: boolean; me
 					throw new Error('Copy button not found');
 				}
 
-				await new Promise(r => setTimeout(r, 3000)); // Potrzebne przez GW issue
 				await button.click();
+				await new Promise(r => setTimeout(r, 3000)); // Potrzebne przez GW issue
 
 				// Wait for the input field and get the link
 				const input = await page.waitForSelector('input[name="mylink"]');
