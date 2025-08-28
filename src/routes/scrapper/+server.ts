@@ -3,7 +3,7 @@ import type { RequestEvent } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 import { analyticsSchema, type CountryCode, linksSchema } from '$lib/server/db/schema';
 import { logger } from '$lib/utils/logger';
-import '../../../../scripts/set-env';
+import '../../../scripts/set-env';
 import { eq } from 'drizzle-orm';
 import { puppeteerService } from '$lib/server/puppeteer';
 
