@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    container_name: drizzle-postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: NbC1MPSld45WuPES66wHFTpADfDSR0XQb3DooF7v80UxnJquI0OimuPFiUtrSosh
+      POSTGRES_USER: postgres
+      POSTGRES_DB: reflink_db
+    ports:
+      - 5432:5432
