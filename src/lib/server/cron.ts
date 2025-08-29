@@ -36,7 +36,7 @@ const runCronForCountry = (country: CountryCode, schedule: string): CronJob => {
         schedule,
         taskFn: async () => {
             try {
-                const url = new URL('/api/scrapper', BASE_URL);
+                const url = new URL('/scrapper', BASE_URL);
                 url.searchParams.append('country', country);
                 url.searchParams.append('password', encodeURIComponent(process.env.SECRET_PASSWORD || ''));
                 const urlString = url.toString();
