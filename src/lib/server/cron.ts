@@ -14,7 +14,7 @@ const getBaseUrl = () => {
 
 const RUN_CRON = process.env.RUN_CRON === 'true';
 
-const BASE_URL = getBaseUrl();
+const BASE_URL = 'http://localhost:3000';
 
 // Define allowed countries
 const ALLOWED_COUNTRIES: CountryCode[] = ['PL', 'DE', 'AT', 'NL'];
