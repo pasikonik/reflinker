@@ -117,7 +117,7 @@ async function scrapeLinks(country: CountryCode): Promise<{ success: boolean; me
 				}
 
 				await button.click();
-				await new Promise(r => setTimeout(r, 7000)); // Potrzebne przez GW issue
+				await new Promise(r => setTimeout(r, 8000)); // Potrzebne przez GW issue
 
 				// Wait for the input field and get the link
 				const input = await page.waitForSelector('input[name="mylink"]');
